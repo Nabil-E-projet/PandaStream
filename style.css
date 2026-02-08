@@ -650,15 +650,16 @@ body {
     /* Lueur bleue */
     max-width: 800px;
     max-height: 85vh;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
+    max-height: 85vh;
+    display: block;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    /* Crucial for iOS */
 }
 
 .hr-modal-content {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+    display: block;
+    height: auto;
 }
 
 .hr-modal-header {
@@ -681,10 +682,8 @@ body {
 
 .hr-modal-body {
     padding: 2.5rem;
-    overflow-y: auto;
-    flex: 1;
-    min-height: 0;
-    /* Important for Firefox flex scrolling */
+    overflow: visible;
+    height: auto;
     color: #e2e8f0;
     line-height: 1.8;
 }
@@ -852,7 +851,8 @@ body {
 
 @media (max-width: 768px) {
     .hero-title {
-        font-size: 3rem;
+        font-size: 2.2rem;
+        word-wrap: break-word;
     }
 
     .episodes-grid-v2 {

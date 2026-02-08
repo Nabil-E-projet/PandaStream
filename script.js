@@ -48,29 +48,30 @@ const hrMode = document.getElementById('hrMode');
 const episodesGrid = document.querySelector('.episodes-grid-v2');
 
 // 0. Loading Screen Logic
-window.addEventListener('load', () => {
-    // Determine Greeting based on time
+// 0. Loading Screen Logic & Instant Greeting
+const setGreeting = () => {
     const hour = new Date().getHours();
     const isNight = hour >= 18 || hour < 5;
     const greetingText = isNight ? "Bonsoir Nisrine 🌸" : "Bonjour Nisrine 🌸";
 
-    if (loadingGreeting) {
-        loadingGreeting.textContent = greetingText;
-    }
+    if (loadingGreeting) loadingGreeting.textContent = greetingText;
 
-    // Also update navbar greeting
     const navGreeting = document.querySelector('.nav-greeting');
-    if (navGreeting) {
-        navGreeting.textContent = greetingText.replace('🌸', '🐼'); // Keep panda in navbar
-    }
+    if (navGreeting) navGreeting.textContent = greetingText.replace('🌸', '🐼');
+};
 
-    // Minimum display time for the pretty animation (2s)
-    setTimeout(() => {
-        loadingScreen.classList.add('fade-out');
-        // Enable scrolling after load
-        document.body.style.overflow = 'auto';
-    }, 2000);
-});
+// Run immediately (script is likely at end of body)
+setGreeting();
+
+const hideLoading = () => {
+    if (loadingScreen.classList.contains('fade-out')) return;
+    loadingScreen.classList.add('fade-out');
+    document.body.style.overflow = 'auto';
+};
+
+// Hide when loaded OR after max 3s (fallback for Safari infinite load)
+window.addEventListener('load', () => setTimeout(hideLoading, 1500));
+setTimeout(hideLoading, 3000); // Safety net
 
 // 1. Navbar Scroll Effect
 const videoModal = document.getElementById('videoModal');
