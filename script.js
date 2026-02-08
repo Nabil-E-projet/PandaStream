@@ -105,7 +105,7 @@ function generateEpisodeCards() {
     `).join('');
 }
 
-// HR Content Data (Comprehensive 6-Module Syllabus)
+// HR Content Data (Super Detailed & Explicit Syllabus)
 const hrTopics = [
     {
         id: 'public-constitution',
@@ -113,17 +113,25 @@ const hrTopics = [
         title: 'Droit Public',
         summary: 'Constitution & Pouvoirs',
         content: `
-            <h3>1. La Constitution (1831)</h3>
-            <p>Norme suprême. Organise l'État et garantit les libertés (Titre II).</p>
+            <h3>1. La Constitution Belge (1831)</h3>
+            <p>Elle est la norme suprême. Elle fonde la Belgique en tant que monarchie constitutionnelle parlementaire.</p>
             <ul>
-                <li><strong>Séparation des Pouvoirs</strong> : Législatif (Parlement), Exécutif (Gouv), Judiciaire (Tribunaux).</li>
-                <li><strong>État Fédéral</strong> : 3 Régions (Territoire), 3 Communautés (Personnes).</li>
+                <li><strong>Article 33</strong> : "Tous les pouvoirs émanent de la Nation." (Souveraineté nationale).</li>
+                <li><strong>Titre II</strong> : Les droits fondamentaux (Liberté d'expression, de culte, de presse...). Ils sont inviolables.</li>
             </ul>
 
-            <h3>2. Organisation des Pouvoirs Publics</h3>
+            <h3>2. La Séparation des Pouvoirs (Montesquieu)</h3>
             <ul>
-                <li><strong>Le Roi</strong> : Chef de l'État, irresponsable (seing ministériel obligatoire).</li>
-                <li><strong>Gouvernement</strong> : Responsable devant la Chambre (Motion de méfiance).</li>
+                <li><strong>Législatif</strong> (Faire la loi) : Parlement Fédéral (Chambre + Sénat) et le Roi.</li>
+                <li><strong>Exécutif</strong> (Appliquer la loi) : Le Roi et son Gouvernement.</li>
+                <li><strong>Judiciaire</strong> (Trancher les litiges) : Cours et Tribunaux (Indépendants).</li>
+            </ul>
+
+            <h3>3. Le Fédéralisme Belge (1993)</h3>
+            <p>La Belgique est un État fédéral complexe divisé en deux types d'entitées fédérées :</p>
+            <ul>
+                <li><strong>3 Communautés</strong> (Liées aux PERSONNES : Langue, Culture, Enseignement) : Française, Flamande, Germanophone.</li>
+                <li><strong>3 Régions</strong> (Liées au SOL : Économie, Environnement, Transport) : Wallonne, Flamande, Bruxelles-Capitale.</li>
             </ul>
         `
     },
@@ -131,102 +139,124 @@ const hrTopics = [
         id: 'admin-responsabilite',
         icon: '⚖️',
         title: 'Resp. de l\'État',
-        summary: 'Flandria & Anca',
+        summary: 'Arrêt Flandria & Conditions',
         content: `
-            <h3>1. Principe Général</h3>
-            <p>Depuis l'<strong>Arrêt Flandria (1920)</strong>, l'État est responsable de ses fautes comme tout citoyen (Art. 1382 CC).</p>
+            <h3>1. Le Tournant : Arrêt Flandria (1920)</h3>
+            <p>Avant 1920, l'État était "irresponsable" (Le Roi ne peut mal faire). La Cour de Cassation a renversé ce principe : l'État est responsable de ses fautes comme n'importe quel citoyen (sur base de l'art. 1382 du Code Civil).</p>
 
-            <h3>2. Les 3 Conditions</h3>
+            <h3>2. Les 3 Conditions Cumulatives</h3>
+            <div class="tip-box">Pour engager la responsabilité de l'État, il faut prouver :</div>
             <ul>
-                <li><strong>Faute</strong> : Erreur de conduite ou illégalité (ex: acte annulé par le CE).</li>
-                <li><strong>Dommage</strong> : Matériel ou moral.</li>
-                <li><strong>Lien Causal</strong>.</li>
+                <li><strong>1. La Faute</strong> : Un comportement qu'une autorité "normalement prudente et diligente" n'aurait pas eu (erreur, illégalité, négligence).</li>
+                <li><strong>2. Le Dommage</strong> : Il doit être certain (pas hypothétique) et personnel (moral ou matériel).</li>
+                <li><strong>3. Le Lien Causal</strong> : Sans la faute, le dommage ne se serait pas produit (Théorie de l'équivalence des conditions).</li>
             </ul>
-            
-            <h3>3. Responsabilité du Judiciaire</h3>
-            <p><strong>Arrêt Anca</strong> : L'État est responsable des fautes des magistrats (si autorité de chose jugée n'est pas remise en cause).</p>
+
+            <h3>3. Cas Spéciaux</h3>
+            <p><strong>Arrêt Anca</strong> : L'État peut même être responsable d'une faute commise par un magistrat (Pouvoir Judiciaire) !</p>
         `
     },
     {
         id: 'droit-admin',
         icon: '✍️',
         title: 'Droit Administratif',
-        summary: 'Actes & Contentieux',
+        summary: 'AAU, Privilèges & Conseil d\'État',
         content: `
-            <h3>1. L'Acte Administratif (AAU)</h3>
-            <p>Acte décisoire et unilatéral. Bénéficie du <strong>Privilège du Préalable</strong> (présumé légal tant que non annulé).</p>
-
-            <h3>2. Le Conseil d'État (CE)</h3>
+            <h3>1. L'Acte Administratif Unilatéral (AAU)</h3>
+            <p>C'est l'outil principal de l'administration. Il est :</p>
             <ul>
-                <li><strong>Annulation</strong> : Rétroactive (Erga Omnes). Pour excès de pouvoir.</li>
-                <li><strong>Suspension</strong> : Urgence + Préjudice grave et difficilement réparable.</li>
+                <li><strong>Décisoire</strong> : Il modifie l'ordonnancement juridique (crée des droits/obligations).</li>
+                <li><strong>Unilatéral</strong> : Il s'impose sans le consentement du destinataire.</li>
+            </ul>
+
+            <h3>2. Les Privilèges de l'Administration</h3>
+            <ul>
+                <li><strong>Privilège du Préalable</strong> : L'acte est présumé légal. Le citoyen doit d'abord obéir, et contester ensuite.</li>
+                <li><strong>Privilège de l'Exécution d'Office</strong> : L'administration peut utiliser la force pour faire exécuter un acte (ex: évacuation) sans passer par un juge, mais uniquement en cas d'urgence ou de loi spécifique.</li>
             </ul>
             
-            <h3>3. Principes Généraux (PGD)</h3>
-            <p>Bonne administration, Motif, Audition, Impartialité.</p>
+            <h3>3. Le Conseil d'État (CE)</h3>
+            <p>La juridiction suprême administrative. Deux recours principaux :</p>
+            <ul>
+                <li><strong>Recours en Annulation</strong> : L'acte illégal disparaît rétroactivement (comme s'il n'avait jamais existé). Délai : 60 jours.</li>
+                <li><strong>Recours en Suspension</strong> : Gel provisoire de l'acte. Il faut prouver l'<strong>Urgence</strong> (péril imminent) et un <strong>Moyen Sérieux</strong> (doute sur la légalité).</li>
+            </ul>
         `
     },
     {
         id: 'droit-europeen',
         icon: '🇪🇺',
         title: 'Droit Européen',
-        summary: 'Institutions & Primauté',
+        summary: 'Institutions & Sources',
         content: `
-            <h3>1. Institutions UE</h3>
+            <h3>1. Distinction Fondamentale</h3>
+            <div class="tip-box">
+                Ne pas confondre <strong>Conseil de l'Europe</strong> (CEDH, Strasbourg, Droits de l'Homme) et <strong>Union Européenne</strong> (Bruxelles, Éco/Pol).
+            </div>
+
+            <h3>2. Le Triangle Institutionnel de l'UE</h3>
             <ul>
-                <li><strong>Commission</strong> : Moteur, propose les lois, gardienne des traités.</li>
-                <li><strong>Conseil (Ministres)</strong> : Décide/Vote (souvent avec le Parlement).</li>
-                <li><strong>Parlement</strong> : Élu, co-législateur.</li>
-                <li><strong>CJUE</strong> : Assure le respect du droit.</li>
+                <li><strong>Commission Européenne</strong> (Bruxelles) : Représente l'intérêt général de l'UE. "Moteur" de l'intégration, elle a le monopole de l'initiative législative.</li>
+                <li><strong>Conseil de l'UE</strong> (Bruxelles) : Représente les États membres (Ministres). Co-législateur.</li>
+                <li><strong>Parlement Européen</strong> (Strasbourg/Bxl) : Représente les citoyens (Députés élus). Co-législateur et contrôle budgétaire.</li>
             </ul>
 
-            <h3>2. Principes Clés</h3>
+            <h3>3. Les Sources du Droit (Droit Dérivé)</h3>
             <ul>
-                <li><strong>Primauté</strong> (Arrêt Le Ski) : Le droit UE prime sur TOUT droit national (même Constitution).</li>
-                <li><strong>Effet Direct</strong> : Invocable par les citoyens devant leur juge.</li>
+                <li><strong>Le Règlement</strong> : Obligatoire dans tous ses éléments, directement applicable (effet immédiat). C'est une "Loi Européenne".</li>
+                <li><strong>La Directive</strong> : Fixe un objectif à atteindre mais laisse le choix des moyens aux États (nécessite une transposition en droit national).</li>
             </ul>
         `
     },
     {
         id: 'science-po',
-        icon: '�',
+        icon: '🗳️',
         title: 'Science Po',
-        summary: 'Conjoncture & Partis',
+        summary: 'Clivages & Conjoncture',
         content: `
-            <h3>1. Clivages (Rokkan)</h3>
+            <h3>1. Les Clivages de Stein Rokkan</h3>
+            <p>La politique belge est structurée par 3 conflits historiques majeurs :</p>
             <ul>
-                <li><strong>Église / État</strong> (Piliers catho vs laïques)</li>
-                <li><strong>Possédants / Travailleurs</strong> (Gauche / Droite)</li>
-                <li><strong>Centre / Périphérie</strong> (Communautaire FL/FR)</li>
+                <li><strong>Église / État</strong> (Philosophique) : A donné naissance au monde Catholique vs Libéral/Socialiste. (Guerre scolaire).</li>
+                <li><strong>Possédants / Travailleurs</strong> (Socio-économique) : Le clivage Gauche (PS/Vooruit) contre Droite (MR/N-VA). Redistributif vs Libéral.</li>
+                <li><strong>Centre / Périphérie</strong> (Communautaire) : Le conflit Flamands vs Francophones. A mené au Fédéralisme.</li>
             </ul>
 
-            <h3>2. Système Électoral</h3>
-            <p>Proportionnelle (Méthode D'Hondt). Favorise le multipartisme et les coalitions.</p>
+            <h3>2. Le Système Électoral</h3>
+            <p>La Belgique utilise la <strong>Représentation Proportionnelle</strong> (Méthode D'Hondt).<br>
+            Conséquence : Aucun parti n'a jamais la majorité absolue (50%+1), ce qui oblige à former des <strong>Coalitions</strong> (Gouvernements de compromis).</p>
 
-            <h3>3. Conjoncture</h3>
-            <p>Analyse des rapports de force (Vivaldi, Arizona, montées des extrêmes).</p>
+            <h3>3. La Particratie</h3>
+            <p>Le pouvoir réel en Belgique réside souvent chez les présidents de partis, qui décident des coalitions et des ministres, réduisant le rôle du Parlement.</p>
         `
     },
     {
         id: 'rh-public',
         icon: '👮',
         title: 'Management RH',
-        summary: 'Fonction Publique',
+        summary: 'Statut vs Contrat',
         content: `
-            <h3>1. Statut vs Contrat</h3>
+            <h3>1. La Dualité du Personnel</h3>
             <ul>
-                <li><strong>Statut</strong> : Unilatéral, nommé, carrière stable.</li>
-                <li><strong>Contrat</strong> : Relation bilatérale (Loi 1978).</li>
+                <li><strong>Le Statutaire</strong> (Fonctionnaire) : Il est dans une situation légale et réglementaire. Il est "nommé" par un acte unilatéral. Son statut peut être modifié unilatéralement par l'autorité.</li>
+                <li><strong>Le Contractuel</strong> : Il a signé un contrat de travail (Loi 1978). Sa situation est figée par le contrat.</li>
             </ul>
 
-            <h3>2. Droits & Devoirs</h3>
+            <h3>2. Droits et Devoirs (Déontologie)</h3>
             <ul>
-                <li><strong>Neutralité</strong> : Traitement égal des usagers.</li>
-                <li><strong>Devoir de réserve</strong> : Prudence dans l'expression des opinions.</li>
+                <li><strong>Devoir de Neutralité</strong> : Traiter les usagers sans discrimination, quelles que soient leurs convictions.</li>
+                <li><strong>Devoir de Réserve</strong> : Le fonctionnaire peut avoir des opinions politiques, mais doit être prudent dans leur expression publique pour ne pas entacher la confiance en l'administration.</li>
+                <li><strong>Devoir d'Obéissance hiérarchique</strong> : Sauf si l'ordre est manifestement illégal.</li>
             </ul>
 
-            <h3>3. Carrière</h3>
-            <p>Recrutement via <strong>SELOR</strong>. Cycle d'évaluation (Planification -> Entretien -> Mention).</p>
+            <h3>3. Le Cycle de l'Évaluation</h3>
+            <p>Pour les statutaires, l'évaluation est obligatoire (Arrêté Royal).</p>
+            <ol>
+                <li>Entretien de <strong>Planification</strong> (Fixer les objectifs).</li>
+                <li>Entretien de <strong>Fonctionnement</strong> (Mi-parcours).</li>
+                <li>Entretien d'<strong>Évaluation</strong> (Mention : Exceptionnel, Répond aux attentes, À améliorer, Insuffisant).</li>
+            </ol>
+            <div class="tip-box">2 évaluations "Insuffisant" consécutives peuvent mener au licenciement pour inaptitude professionnelle !</div>
         `
     }
 ];
@@ -259,15 +289,15 @@ function generateHRCards() {
     const hrGrid = document.querySelector('.hr-grid-v2');
     if (!hrGrid) return;
 
-    hrGrid.innerHTML = hrTopics.map(topic => `
-        <article class="hr-card-v2" onclick="openHRModal('${topic.id}')">
+    hrGrid.innerHTML = hrTopics.map((topic, index) => `
+        <article class="hr-card-v2" onclick="openHRModal('${topic.id}')" style="animation-delay: ${index * 100}ms; opacity: 0; animation: fadeUp 0.5s ease forwards ${index * 100}ms;">
             <div class="card-header">
                 <span class="card-icon">${topic.icon}</span>
                 <h4>${topic.title}</h4>
             </div>
             <div class="card-body">
-                <p style="color: #94a3b8; margin-bottom: 1rem;">${topic.summary}</p>
-                <span class="read-more">Voir la fiche &rarr;</span>
+                <p>${topic.summary}</p>
+                <div class="read-more">CONSULTER &rarr;</div>
             </div>
         </article>
     `).join('');
