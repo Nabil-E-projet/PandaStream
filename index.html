@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PandaStream Premium 🐼</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-content">
+            <div class="panda-loader">🐼</div>
+            <h1 id="loadingGreeting" class="loading-greeting">Bonjour Nisrine 🌸</h1>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-content">
+            <div class="nav-brand">
+                <span class="panda-logo">🐼</span>
+                <span class="brand-name">PandaStream</span>
+            </div>
+
+            <div class="nav-actions">
+                <span class="nav-greeting">Bonjour Nisrine</span>
+                <button class="mode-switch" id="modeSwitch" title="Basculer vers le mode révision (Ctrl+H)">
+                    <span class="switch-icon">🎓</span>
+                    <span class="switch-label">Mode Révision</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Streaming Mode -->
+        <div id="streamingMode">
+            <!-- Hero Section -->
+            <header class="hero">
+                <div class="hero-backdrop"></div>
+                <div class="hero-content">
+                    <span class="hero-tag">Saison 1 Complète</span>
+                    <h1 class="hero-title">Demon Slayer</h1>
+                    <h2 class="hero-subtitle">Kimetsu no Yaiba • 鬼滅の刃</h2>
+                    <p class="hero-description">
+                        Tanjiro Kamado, un jeune vendeur de charbon, voit sa vie basculer lorsque sa famille est
+                        massacrée par un démon. Nezuko, sa petite sœur et seule survivante, est transformée en démon.
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" onclick="scrollToEpisodes()">
+                            ▶ Commencer
+                        </button>
+                        <button class="btn btn-secondary">
+                            ℹ Plus d'infos
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Episodes Section -->
+            <section class="content-section" id="episodesSection">
+                <div class="section-header">
+                    <h3>Épisodes</h3>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="episodes-grid-v2">
+                    <!-- Episodes will be injected here -->
+                </div>
+            </section>
+        </div>
+
+        <!-- HR Revision Mode (Hidden by default) -->
+        <div id="hrMode" class="hidden">
+            <header class="hr-header">
+                <div class="hr-container">
+                    <h1>Dossiers Confidentiels <span class="highlight">RH Belgique</span></h1>
+                    <p>Accès autorisé : Nisrine • Niveau Panda 🐼</p>
+                </div>
+            </header>
+
+            <section class="hr-content">
+                <div class="hr-grid-v2">
+                    <!-- HR Cards will be injected/static here -->
+                    <article class="hr-card-v2">
+                        <div class="card-header">
+                            <span class="card-icon">⚖️</span>
+                            <h4>Droit Social</h4>
+                        </div>
+                        <div class="card-body">
+                            <ul>
+                                <li>Loi du 3 juillet 1978</li>
+                                <li>Hiérarchie des sources</li>
+                                <li>Règlement de travail</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="hr-card-v2">
+                        <div class="card-header">
+                            <span class="card-icon">📝</span>
+                            <h4>Contrats</h4>
+                        </div>
+                        <div class="card-body">
+                            <ul>
+                                <li>CDI vs CDD</li>
+                                <li>Période d'essai (supprimée)</li>
+                                <li>Clauses particulières</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="hr-card-v2">
+                        <div class="card-header">
+                            <span class="card-icon">🏛️</span>
+                            <h4>ONSS</h4>
+                        </div>
+                        <div class="card-body">
+                            <ul>
+                                <li>Cotisations 13.07%</li>
+                                <li>Déclaration DmfA</li>
+                                <li>Financement Sécu</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="hr-card-v2">
+                        <div class="card-header">
+                            <span class="card-icon">🏖️</span>
+                            <h4>Congés</h4>
+                        </div>
+                        <div class="card-body">
+                            <ul>
+                                <li>Droit aux vacances</li>
+                                <li>Pécules (simple/double)</li>
+                                <li>Jours fériés</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="hr-card-v2">
+                        <div class="card-header">
+                            <span class="card-icon">🚫</span>
+                            <h4>Licenciement</h4>
+                        </div>
+                        <div class="card-body">
+                            <ul>
+                                <li>Préavis (semaines)</li>
+                                <li>Motif grave</li>
+                                <li>C4 & Documents</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="hr-card-v2">
+                        <div class="card-header">
+                            <span class="card-icon">💰</span>
+                            <h4>Rémunération</h4>
+                        </div>
+                        <div class="card-body">
+                            <ul>
+                                <li>Barèmes CP</li>
+                                <li>Indexation</li>
+                                <li>Avantages en nature</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Video Modal V2 -->
+    <div class="modal-backdrop" id="videoModal">
+        <div class="modal-wrapper">
+            <button class="modal-close-btn" id="modalClose">✕</button>
+            <div class="modal-video-container">
+                <iframe id="videoPlayer" src="" allowfullscreen></iframe>
+            </div>
+            <div class="modal-details">
+                <h2 id="episodeTitle">Titre Épisode</h2>
+                <div class="episode-meta">
+                    <span class="quality-tag">HD</span>
+                    <span class="lang-tag">VF</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- HR Modal (Revision Fiche) -->
+    <div class="modal-backdrop" id="hrModal">
+        <div class="modal-wrapper hr-modal-wrapper">
+            <button class="modal-close-btn" id="hrModalClose">✕</button>
+            <div class="hr-modal-content">
+                <div class="hr-modal-header">
+                    <span class="hr-icon" id="hrModalIcon">⚖️</span>
+                    <h2 id="hrModalTitle">Titre du Dossier</h2>
+                </div>
+                <div class="hr-modal-body" id="hrModalBody">
+                    <!-- Dynamic Content -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
