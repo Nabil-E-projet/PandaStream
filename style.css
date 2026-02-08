@@ -652,6 +652,7 @@ body {
     max-height: 85vh;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .hr-modal-content {
@@ -681,6 +682,9 @@ body {
 .hr-modal-body {
     padding: 2.5rem;
     overflow-y: auto;
+    flex: 1;
+    min-height: 0;
+    /* Important for Firefox flex scrolling */
     color: #e2e8f0;
     line-height: 1.8;
 }
@@ -856,6 +860,10 @@ body {
     }
 
     .nav-greeting {
+        display: none;
+    }
+
+    .switch-label {
         display: none;
     }
 }
