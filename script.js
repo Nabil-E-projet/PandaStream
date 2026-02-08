@@ -305,30 +305,34 @@ function generateHRCards() {
 }
 
 // 6. HR Modal Logic
-const hrModal = document.getElementById('hrModal');
-const hrModalClose = document.getElementById('hrModalClose');
-const hrModalTitle = document.getElementById('hrModalTitle');
-const hrModalIcon = document.getElementById('hrModalIcon');
-const hrModalBody = document.getElementById('hrModalBody');
+// 6. Holo-Reader Logic (New Interactive System)
+const holoReader = document.getElementById('holoReader');
+const readerTitle = document.getElementById('readerTitle');
+const readerContent = document.getElementById('readerContent');
 
+// Replaces openHRModal to use the new Reader
 window.openHRModal = function (id) {
     const topic = hrTopics.find(t => t.id === id);
     if (!topic) return;
 
-    hrModalTitle.textContent = topic.title;
-    hrModalIcon.textContent = topic.icon;
-    hrModalBody.innerHTML = topic.content;
+    readerTitle.textContent = "DOSSIER: " + topic.title;
+    readerContent.innerHTML = topic.content;
 
-    hrModal.classList.add('active');
-    document.body.style.overflow = 'hidden';
+    holoReader.classList.add('active');
+    document.body.style.overflow = 'hidden'; // Stop background scrolling
 };
 
-if (hrModalClose) {
-    hrModalClose.addEventListener('click', () => {
-        hrModal.classList.remove('active');
-        document.body.style.overflow = 'auto';
-    });
-}
+window.closeHoloReader = function () {
+    holoReader.classList.remove('active');
+    document.body.style.overflow = 'auto'; // Restore scrolling
+};
+
+// Close on Escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && holoReader.classList.contains('active')) {
+        closeHoloReader();
+    }
+});
 
 // 4. Video Modal Logic
 window.openEpisode = function (num) {
