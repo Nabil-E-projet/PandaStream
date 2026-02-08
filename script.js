@@ -92,7 +92,7 @@ function generateEpisodeCards() {
     episodesGrid.innerHTML = episodes.map(ep => `
         <div class="episode-card-v2" onclick="openEpisode(${ep.num})">
             <div class="ep-img-container" style="width: 100%; height: 100%; position: relative; overflow: hidden;">
-                <img src="demon-slayer.jpg" class="ep-img" alt="Episode ${ep.num}">
+                <img src="./demon-slayer.jpg" class="ep-img" alt="Episode ${ep.num}">
                 <div class="play-overlay">
                     <span>▶</span>
                 </div>

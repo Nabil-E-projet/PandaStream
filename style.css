@@ -233,7 +233,7 @@ body {
 .hero-backdrop {
     position: absolute;
     inset: 0;
-    background-image: url('GY5P48XEY-backdrop_wide.avif');
+    background-image: url('./demon-slayer.jpg');
     /* Placeholder haute qualité par défaut */
     background-size: cover;
     background-position: center top;
